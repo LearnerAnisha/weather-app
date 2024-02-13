@@ -11,7 +11,7 @@ const friimg = document.querySelector(".day6 img");
 const satimg = document.querySelector(".day7 img");
 
 async function checkweather(city) {
-    // saveInDatabase(city);
+    saveInDatabase(city);
     const response = await fetch(`http://localhost/anishagtm/datapage_anisha_gautam_2408636.php?cityname=${city}`);
     const weatherdata = await response.json();
     console.log(weatherdata);
@@ -134,11 +134,11 @@ async function checkweather(city) {
     }
 }
 
-// async function saveInDatabase(city){
-//     const response = await fetch(`index_anisha_gautam_2408636.php?cityname=${city}`);
-//     const data = await response.json();
-//     console.log(data);
-// }
+async function saveInDatabase(city){
+     const response = await fetch(`index_anisha_gautam_2408636.php?cityname=${city}`);
+     const data = await response.json();
+     console.log(data);
+ }
 
 setInterval(function () {
     // Get the current date and time
